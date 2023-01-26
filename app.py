@@ -12,7 +12,7 @@ link_label.config(padx=20,pady=20)
 input_link_label = Entry()
 input_link_label.grid(column=0 , row=1)
 
-def Download(link):
+def Download():
     link = input_link_label.get()
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
@@ -24,6 +24,9 @@ def Download(link):
 
 
 button_Download=Button(text='click to download' , command=Download)
+button_Download.grid(column=2 , row= 1 )
 
 # link = input("Enter the YouTube video URL: ")
 # Download(link)
+
+window.mainloop()
