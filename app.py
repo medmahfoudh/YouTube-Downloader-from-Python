@@ -23,5 +23,7 @@ def Download(link):
     print("Download is completed successfully")
 
 
+button_Download=Button(text='' , command=moyenne_tous_les_matieres)
+
 link = input("Enter the YouTube video URL: ")
 Download(link)
