@@ -1,5 +1,6 @@
 from pytube import YouTube
 from tkinter import *
+from tkinter import messagebox
 
 
 window = Tk()
@@ -18,9 +19,12 @@ def Download():
     youtubeObject = youtubeObject.streams.get_highest_resolution()
     try:
         youtubeObject.download()
+        messagebox.showinfo("Success", "Video downloaded successfully!")
+
     except:
-        print("An error has occurred")
-    print("Download is completed successfully")
+        messagebox.showerror("Error")
+
+    messagebox.showinfo("Download is completed successfully")
 
 
 button_Download=Button(text='click to download' , command=Download)
