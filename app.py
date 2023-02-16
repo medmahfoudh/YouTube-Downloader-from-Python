@@ -30,7 +30,5 @@ def Download():
 button_Download=Button(text='click to download' , command=Download)
 button_Download.grid(column=2 , row= 1 )
 
-# link = input("Enter the YouTube video URL: ")
-# Download(link)
 
 window.mainloop()
